@@ -25,15 +25,15 @@ an acess and refresh token and then tell the user to log-in again.
 
   Parameters: login, password and email [All obligatory for a POST request]
 
-  This route does the registration of an user using POST, it uses PUT to change info to a registered user and uses DELETE to disable access of a user by changing the account to inactive in the database
+  This route does the registration of an user using POST, it uses PUT to change info to a registered user and uses DELETE to disable access of a user by changing the   account to inactive in the database
   
- - /login/
+ - /account/login/
 
   Parameters: login and password
 
   This route is used to get an token to access the database
 
-- /logout/
+- /account/logout/
 
   Parameters: none
   
@@ -43,7 +43,7 @@ an acess and refresh token and then tell the user to log-in again.
 
   Parameters: name [Obligatory for POST], details and status
 
-  This route takes care of both creating a todo by sending a request with POST and displaying all the ToDos owned by the currently logged user by sending a GET request
+  This route takes care of both creating a todo by sending a request with POST and displaying all the ToDos owned by the currently logged user by sending a GET      request
 
 - /todo/todobyid/<id>/
 
