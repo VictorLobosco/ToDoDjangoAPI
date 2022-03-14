@@ -27,7 +27,7 @@ an acess and refresh token and then tell the user to log-in again.
 
   This route does the registration of an user using POST, it uses PUT to change info to a registered user and uses DELETE to disable access of a user by changing the   account to inactive in the database
   
- - /account/login/
+- /account/login/
 
   Parameters: login and password
 
