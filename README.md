@@ -16,7 +16,7 @@ A port and improvement to Django rest-framework of my Flask rest-api
 
 # How it works
 
-the layout of this project is very similiar to the flask version, the main diference is that the way a new acess token is issued to the user, in this version i use
+The layout of this project is very similiar to the flask version, the main diference is that the way a new acess token is issued to the user, in this version i use
 a code that run before each view that checks if the user has an non expired valid acess token, if the acess token is expired it then checks to see if the user has an
 refresh token that is still valid, if it has a new acess token is created an sent with the response of the view, if the user dosent have an valid refresh token the api deletes all instances of
 an acess and refresh token and then tell the user to log-in again.
