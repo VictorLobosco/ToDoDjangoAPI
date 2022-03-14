@@ -45,7 +45,7 @@ an acess and refresh token and then tell the user to log-in again.
 
   This route takes care of both creating a todo by sending a request with POST and displaying all the ToDos owned by the currently logged user by sending a GET      request
 
-- /todo/todobyid/<id>/
+- /todo/todobyid/'<id>'/
 
   Parameters: name, details and status
 
