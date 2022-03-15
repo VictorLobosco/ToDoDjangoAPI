@@ -1,7 +1,4 @@
-from dataclasses import field
-#from pyexpat import model
 from rest_framework import serializers
-from django.db import models
 from .models import Todo
 from django.conf import settings
 
@@ -14,6 +11,7 @@ class ToDoSerializer(serializers.ModelSerializer):
         if not (data.get('name')):
             raise serializers.ValidationError("name field cannot be empyty")
         return data
+
     class Meta:
         model = Todo
         fields = ['name','details','status', 'user']

@@ -1,10 +1,8 @@
 
 # Create your views here.
-from cgitb import reset
-from urllib import response
 from rest_framework import generics
 from rest_framework.response import Response
-from .serializer import RegisterSerializer, UserSerializer
+from .serializer import RegisterSerializer
 from django.contrib.auth.hashers import make_password
 from rest_framework_simplejwt.tokens import RefreshToken, TokenError, AccessToken
 from rest_framework.response import Response
@@ -21,7 +19,6 @@ def get_token_id(request):
     raw_token = request.COOKIES.get('access_token')
     access_token_obj = AccessToken(str(raw_token))
     user_id= access_token_obj['user_id']
-    #print(access_token_obj)
     return user_id
 
 #returns both an acess and a refresh token for a logged user.
